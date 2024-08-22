@@ -69,8 +69,31 @@ public class ListTheory {
         System.out.println("-----------------------------");
 
         /* OTHERS */
-//        stringList.contains("water");
-//        stringList.contains("watermelon");
+        System.out.println("Rezultate folosind metoda contains");
+        System.out.println(stringList.contains("water")); // true, because element is in list
+        System.out.println(stringList.contains("watermelon")); // false. because element is partially in the list
+        System.out.println(stringList.contains("dog")); // false, because element is not in list
+
+        System.out.println("Rezultate folosind metoda containsAll");
+        System.out.println(stringList.containsAll(new ArrayList<>(List.of("apple", "lettuce"))));
+        System.out.println(stringList.containsAll(new ArrayList<>(List.of("apple", "dog"))));
+
+        System.out.println("Rezultate folosind metoda equals");
+        System.out.println(stringList.equals(new ArrayList<>(List.of("apple", "cherry", "lettuce", "watermelon"))));
+        System.out.println(stringList.equals(new ArrayList<>(List.of("apple", "cherry",  "watermelon","lettuce"))));
+        System.out.println(stringList.equals(new ArrayList<>(List.of("apple", "cherry", "lettuce", "watermelon"))));
+
+        System.out.println("Rezultate folosind metoda indexOf si lastIndexOf");
+        stringList.add("cherry");
+        System.out.println(stringList.indexOf("cherry"));
+        System.out.println(stringList.lastIndexOf("cherry"));
+
+        System.out.println("Rezultate folosind metoda subList");
+        System.out.println(stringList);
+        System.out.println(stringList.subList(1,3));
+
+        System.out.println("rezultate folosind metodele clear si isEmpty");
+        System.out.println(stringList.isEmpty());
 
         stringList.clear();
         System.out.println(stringList);
